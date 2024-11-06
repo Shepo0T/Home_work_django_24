@@ -1,0 +1,64 @@
+[
+  {
+    "model": "lms.course",
+    "pk": 1,
+    "fields": {
+      "title": "Гигачадовские скилы",
+      "preview": "",
+      "description": "научимся пользоваться гигачадовской силой"
+    }
+  },
+  {
+    "model": "lms.course",
+    "pk": 2,
+    "fields": {
+      "title": "Великий хардбассер и как этим пользоваться",
+      "preview": "",
+      "description": "В любой не понятной ситуации и всегда хардбассер"
+    }
+  },
+  {
+    "model": "lms.lesson",
+    "pk": 2,
+    "fields": {
+      "course": 1,
+      "title": "Познание своего гигачада",
+      "description": "Каждый должен знать и контролировать своего гигачада",
+      "preview": "",
+      "video_url": null
+    }
+  },
+  {
+    "model": "lms.lesson",
+    "pk": 3,
+    "fields": {
+      "course": 1,
+      "title": "Взятие верха над своим гигачадом",
+      "description": "Взяв верх над своим, получишь доступ к другим",
+      "preview": "",
+      "video_url": null
+    }
+  },
+  {
+    "model": "lms.lesson",
+    "pk": 4,
+    "fields": {
+      "course": 2,
+      "title": "Хардбасс с выходом",
+      "description": "хардбасс с елементами циганочки",
+      "preview": "",
+      "video_url": null
+    }
+  },
+  {
+    "model": "lms.lesson",
+    "pk": 5,
+    "fields": {
+      "course": 2,
+      "title": "Хардбасс вне пространств",
+      "description": "хардбасс как воплощение магии прастранства",
+      "preview": "",
+      "video_url": null
+    }
+  }
+]

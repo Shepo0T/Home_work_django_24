@@ -1,0 +1,44 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$RL1KWtjPPui4UEGuoNlgsH$MqEQBczJbxD2Hi/Y6NmdCPMyF6LAPl4AIN4+O3cubYM=",
+      "last_login": "2024-11-05T17:12:17.313Z",
+      "is_superuser": true,
+      "username": "",
+      "first_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-11-05T17:11:57.941Z",
+      "email": "admin@project.upit",
+      "phone": null,
+      "avatar": "",
+      "country": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "test",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "Володя",
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-11-06T12:37:24.727Z",
+      "email": "test@test.ru",
+      "phone": "+7-979-845-6122",
+      "avatar": "",
+      "country": "Russia",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
