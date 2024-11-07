@@ -5,7 +5,8 @@
     "fields": {
       "title": "Гигачадовские скилы",
       "preview": "",
-      "description": "научимся пользоваться гигачадовской силой"
+      "description": "научимся пользоваться гигачадовской силой",
+      "owner": null
     }
   },
   {
@@ -14,7 +15,18 @@
     "fields": {
       "title": "Великий хардбассер и как этим пользоваться",
       "preview": "",
-      "description": "В любой не понятной ситуации и всегда хардбассер"
+      "description": "В любой не понятной ситуации и всегда хардбассер",
+      "owner": null
+    }
+  },
+  {
+    "model": "lms.course",
+    "pk": 3,
+    "fields": {
+      "title": "тест",
+      "preview": "",
+      "description": "тест",
+      "owner": 4
     }
   },
   {
@@ -25,7 +37,8 @@
       "title": "Познание своего гигачада",
       "description": "Каждый должен знать и контролировать своего гигачада",
       "preview": "",
-      "video_url": null
+      "video_url": null,
+      "owner": null
     }
   },
   {
@@ -36,7 +49,8 @@
       "title": "Взятие верха над своим гигачадом",
       "description": "Взяв верх над своим, получишь доступ к другим",
       "preview": "",
-      "video_url": null
+      "video_url": null,
+      "owner": null
     }
   },
   {
@@ -47,7 +61,8 @@
       "title": "Хардбасс с выходом",
       "description": "хардбасс с елементами циганочки",
       "preview": "",
-      "video_url": null
+      "video_url": null,
+      "owner": null
     }
   },
   {
@@ -58,7 +73,20 @@
       "title": "Хардбасс вне пространств",
       "description": "хардбасс как воплощение магии прастранства",
       "preview": "",
-      "video_url": null
+      "video_url": null,
+      "owner": null
+    }
+  },
+  {
+    "model": "lms.lesson",
+    "pk": 6,
+    "fields": {
+      "course": 3,
+      "title": "тест",
+      "description": "тест",
+      "preview": "",
+      "video_url": null,
+      "owner": 4
     }
   }
 ]

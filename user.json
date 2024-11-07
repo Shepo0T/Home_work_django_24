@@ -40,5 +40,70 @@
       "groups": [],
       "user_permissions": []
     }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$tZanEsf0pSJm4uSAuETgb3$hqp1OrYVTc7RrZo0SVWzmVeBVEp4gUE6AEfBSUle0z4=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "Гена",
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-11-06T15:03:10.468Z",
+      "email": "moderator@test.ru",
+      "phone": null,
+      "avatar": "",
+      "country": null,
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$Xy0DJfIWsotMQdvsZ0UOUE$apl7GXRpkWxouZzHZYCtDohYpA6kdrHFHQbJfOHEH1s=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "Георгий",
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-11-06T15:06:57.380Z",
+      "email": "user@test.ru",
+      "phone": null,
+      "avatar": "",
+      "country": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$870000$lhDZcDFuFPhU196MVcAe55$W/DV5Vr8CAsiDq3a7oYSBNHDP6BA9uoWcyc+Cis49R4=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "Фелиция",
+      "first_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-11-06T15:08:01.145Z",
+      "email": "staff@test.ru",
+      "phone": null,
+      "avatar": "",
+      "country": null,
+      "groups": [],
+      "user_permissions": []
+    }
   }
 ]
