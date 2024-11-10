@@ -1,0 +1,13 @@
+Name                 Stmts   Miss  Cover   Missing
+--------------------------------------------------
+lms/models.py           35      3    91%   22, 57, 69
+lms/serializers.py      23      3    87%   21, 24-25
+lms/validators.py        8      1    88%   11
+lms/views.py            66      2    97%   19, 54
+users/models.py         31      1    97%   57
+users/views.py          41      3    93%   17-19
+--------------------------------------------------
+TOTAL                  286     13    95%
+
+9 files skipped due to complete coverage.
+Coverage failure: total of 95 is less than fail-under=98
