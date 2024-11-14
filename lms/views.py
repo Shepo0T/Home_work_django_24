@@ -1,3 +1,5 @@
+from django.utils.decorators import method_decorator
+from drf_yasg.utils import swagger_auto_schema
 from rest_framework import viewsets, generics
 from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import IsAuthenticated
@@ -9,7 +11,12 @@ from lms.paginators import CoursePaginator, LessonPaginator
 from lms.serializers import CourseSerializer, LessonSerializer, SubscriptionSerializer
 from users.permissions import IsModerator, IsOwner
 
+@method_decorator(name='list', decorator=swagger_auto_schema(
+    operation_description="Получение списка доступных курсов"
+))
+
 class CourseViewSet(viewsets.ModelViewSet):
+    """Контроллер работы с Курсами"""
     serializer_class =CourseSerializer
     queryset = Course.objects.all()
     pagination_class = CoursePaginator
@@ -36,6 +43,7 @@ class CourseViewSet(viewsets.ModelViewSet):
 
 
 class LessonCreateAPIView(generics.CreateAPIView):
+    """Контроллер создания уроков"""
     serializer_class = LessonSerializer
     permission_classes = (IsAuthenticated & ~IsModerator,)
 
@@ -44,6 +52,7 @@ class LessonCreateAPIView(generics.CreateAPIView):
 
 
 class LessonListAPIView(generics.ListAPIView):
+    """Контроллер просмотра списка уроков"""
     serializer_class = LessonSerializer
     queryset = Lesson.objects.all()
     permission_classes = (IsAuthenticated & IsModerator | IsOwner,)
@@ -56,20 +65,24 @@ class LessonListAPIView(generics.ListAPIView):
             return Course.objects.filter(owner=self.request.user.pk)
 
 class LessonRetrieveAPIView(generics.RetrieveAPIView):
+    """Контроллер для просмотра одного урока"""
     serializer_class = LessonSerializer
     queryset = Lesson.objects.all()
     permission_classes = (IsAuthenticated & IsModerator | IsOwner,)
 
 class LessonUpdateAPIView(generics.UpdateAPIView):
+    """Контроллер изменения уроков"""
     serializer_class = LessonSerializer
     queryset = Lesson.objects.all()
     permission_classes = (IsAuthenticated & IsModerator | IsOwner,)
 
 class LessonDestroyAPIView(generics.DestroyAPIView):
+    """Контроллер удаления уроков"""
     queryset = Lesson.objects.all()
     permission_classes = (IsAuthenticated & IsOwner,)
 
 class SubscriptionAPIView(APIView):
+    """Контроллер работы с подписками"""
     serializer_class = SubscriptionSerializer
     permission_classes = (IsAuthenticated,)
 
