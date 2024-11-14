@@ -8,6 +8,7 @@ NULLABLE = {"blank": True, "null": True}
 
 
 class User(AbstractUser):
+    
     email = models.EmailField(unique=True, blank=True)
     phone = models.CharField(
         max_length=25, verbose_name="Телефон", **NULLABLE, help_text="Укажите номер"
@@ -48,6 +49,8 @@ class Payments(models.Model):
     payment_method = models.CharField(
         choices=PAYMENT_METHOD, default=CASH, verbose_name="Способ оплаты"
     )
+    session_id = models.CharField(max_length=300, verbose_name="ID сессии", **NULLABLE)
+    payment_link = models.URLField(max_length=400, verbose_name="Ссылка на оплату", **NULLABLE)
 
     class Meta:
         verbose_name = "Оплата"
