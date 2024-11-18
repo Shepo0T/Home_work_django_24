@@ -21,6 +21,8 @@ django-cors-headers = "^4.6.0"
 stripe = "^11.2.0"
 python-dotenv = "^1.0.1"
 forex-python = "^1.8"
+celery = "^5.4.0"
+django-celery-beat = "^2.7.0"
 
 
 [build-system]
