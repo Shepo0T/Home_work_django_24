@@ -9,6 +9,7 @@ from rest_framework.views import APIView
 from lms.models import Course, Lesson, Subscription
 from lms.paginators import CoursePaginator, LessonPaginator
 from lms.serializers import CourseSerializer, LessonSerializer, SubscriptionSerializer
+from lms.tasks import send_email_updating_course
 from users.permissions import IsModerator, IsOwner
 
 @method_decorator(name='list', decorator=swagger_auto_schema(
@@ -41,6 +42,9 @@ class CourseViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
 
+    def perform_update(self, serializer):
+        instance = serializer.save()
+        send_email_updating_course.delay(instance.pk)
 
 class LessonCreateAPIView(generics.CreateAPIView):
     """Контроллер создания уроков"""
